@@ -1,12 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import Nav from './components/navigation/Nav';
 
 function App() {
   return (
     <div className='container-main'>
       <div className='row'>
           <div className='col-sm-2 bg-dark'>
-            <p>Nav Goes Here</p>
+            <Nav />
           </div>
           <div className='col-sm-10'>
             body Goes here
