@@ -4,12 +4,12 @@ import Nav from './components/navigation/Nav';
 
 function App() {
   return (
-    <div className='container-main'>
+    <div className='container-main h-100'>
       <div className='row'>
-          <div className='col-sm-2 bg-dark'>
+          <div className='col-sm-3'>
             <Nav />
           </div>
-          <div className='col-sm-10'>
+          <div className='col-sm-9'>
             body Goes here
           </div>
       </div>

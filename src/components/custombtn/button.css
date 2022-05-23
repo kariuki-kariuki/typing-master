@@ -2,5 +2,11 @@
   border: none; 
   padding: 8px;
   width: 100%;
+  color: whitesmoke;
 }
 
+.Button-custom:hover{
+  background-color: bisque;
+  color: black;
+  transition: 1.5s;
+}
