@@ -3,8 +3,15 @@ import './App.css';
 
 function App() {
   return (
-    <div>
-      
+    <div className='container-main'>
+      <div className='row'>
+          <div className='col-sm-2 bg-dark'>
+            <p>Nav Goes Here</p>
+          </div>
+          <div className='col-sm-10'>
+            body Goes here
+          </div>
+      </div>
     </div>
   );
 }
