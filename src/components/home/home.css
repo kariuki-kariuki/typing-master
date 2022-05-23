@@ -1,0 +1,11 @@
+.half-content{
+  height: 90vh;
+}
+
+.card-custom{
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background: rgb(190, 180, 180);
+  border-radius: 5px;
+  padding: 10px;
+}

@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import Nav from './components/navigation/Nav';
+import Home from './components/home/Home';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
             <Nav />
           </div>
           <div className='col-sm-9'>
-            body Goes here
+            <Home />
           </div>
       </div>
     </div>
