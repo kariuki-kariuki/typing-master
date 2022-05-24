@@ -1,7 +1,8 @@
 import './App.css';
 import Nav from './components/navigation/Nav';
 // import Home from './components/home/Home';
-import Test from './components/test/Test';
+// import Test from './components/test/Test';
+import Login from './components/login/Login';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
           </div>
           <div className='col-sm-9'>
             {/* <Home /> */}
-            <Test />
+            <Login />
+            {/* <Test /> */}
           </div>
       </div>
     </div>
