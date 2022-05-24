@@ -1,6 +1,6 @@
 
 import Button from "../custombtn/Button"
-
+import { NavLink, BrowserRouter as Router } from "react-router-dom";
 import "./Nav.css"
 
 function Nav(){
@@ -8,24 +8,39 @@ function Nav(){
   return (
     <nav className="container-main p-2 bg-dark ">
       <br />
-      <Button text="Home" backColor="#0000" bradius="5px" />
+      <Router>
+        <NavLink to="/">
+          <Button text="Home" backColor="#0000" bradius="5px" />
+        </NavLink>
+      </Router>
+
       <br />
       <br />
-      <Button text="About" backColor="#0000" bradius="5px" />
+      {/* <NavLink to="login">
+        <Button text="About" backColor="#0000" bradius="5px" />
+      </NavLink>
       <br />
       <br />
       <hr />
-      <Button text="Contact" backColor="#0000" bradius="5px" />
+      <NavLink>
+        <Button text="Contact" backColor="#0000" bradius="5px" />
+      </NavLink>
       <br />
       <br />
-      <Button text="Test" backColor="#0000" bradius="5px" />
+      <NavLink to='test' exact>
+        <Button text="Test" backColor="#0000" bradius="5px" />
+      </NavLink>
       <br />
       <br />
       <hr />
-      <Button text="Dashboard" backColor="#0000" bradius="5px" />
+      <NavLink>
+        <Button text="Dashboard" backColor="#0000" bradius="5px" />
+      </NavLink>
       <br />
       <br />
-      <Button text="Login" backColor="#0000" bradius="5px" />
+      <NavLink to="login" exact>
+        <Button text="Login" backColor="#0000" bradius="5px" />
+      </NavLink> */}
       <br />
       <hr />
     </nav>
