@@ -74,7 +74,7 @@ function KeyBoard({input, handleInput}){
         <div className="space btn-key">space</div>
         <div className="normal-btn btn-key">alt gr</div>
         <div className="normal-btn btn-key">ctrl</div>
-        <div className="normal-btn btn-key"> ux</div>
+        <div className="normal-btn btn-key"> ux </div>
         <div className="normal-btn btn-key">--</div>
         <div className="normal-btn btn-key"> ui</div>
       </div>
