@@ -1,6 +1,6 @@
 
 import Button from "../custombtn/Button"
-import { NavLink, BrowserRouter as Router } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Nav.css"
 
 function Nav(){
