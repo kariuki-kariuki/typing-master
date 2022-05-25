@@ -12,6 +12,7 @@ function KeyBoard({input, handleInput}){
             type="text"
             value={input}
             onChange={handleInput}
+            placeholder = "Type Here"
           />
         </div>
         <div className="half-btn btn-key"> ` </div>
