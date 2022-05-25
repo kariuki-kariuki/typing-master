@@ -1,5 +1,4 @@
 import './home.css'
-import Turbo from '../turbo/Turbo';
 function Home(){
 
   return (

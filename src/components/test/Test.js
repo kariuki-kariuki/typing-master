@@ -45,11 +45,8 @@ function Test(){
 
       
     }
-  }, [myLeng])
+  }, [myLeng, btn])
 
-  function handleBtnReset(){
-
-  }
   function handleInput(e){
     setInput(e.target.value)
     // setMylength(() => input.length)

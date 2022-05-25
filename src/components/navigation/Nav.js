@@ -1,13 +1,12 @@
 
 import Button from "../custombtn/Button"
 import { NavLink } from "react-router-dom";
-import Test from "../test/Test";
 import "./Nav.css"
 
 function Nav(){
 
   return (
-    <nav className="container-main p-5 bg-dark ">
+    <nav className="container-main p-5 ">
       <br />
       <NavLink to="/">
         <Button text="Home"  bradius="5px" />
@@ -15,7 +14,7 @@ function Nav(){
       <br />
       <br />
       <NavLink to= "/test">
-        <Button text='home'  bradius = "5px" />
+        <Button text='Test'  bradius = "5px" />
       </NavLink>
       <br />
       <br />
