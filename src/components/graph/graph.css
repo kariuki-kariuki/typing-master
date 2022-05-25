@@ -1,0 +1,44 @@
+.graph{
+  width: 100%;
+  height: 50vh;
+  color: white;
+  padding-left: 20px;
+
+
+}
+.graph span{
+  display: block;
+}
+
+.spanone{
+  display: inline-block;
+  width: 100%;  
+  border-right: 2px solid blue;
+  border-left: 1px solid white;
+}
+
+
+.spantwo{
+  width: 40px;
+  background-color: green;
+  margin-left: 10px;
+  bottom: 0;
+}
+
+.spanthree{
+  width: 40px;
+  background-color: beige;
+  margin-left: 10px;
+}
+
+.spanfour{
+  width: 40px;
+  background-color: yellow;
+  margin-left: 10px;
+}
+
+.spanfive{
+  width: 40px;
+  background-color: orange;
+  margin-left: 10px;
+}
