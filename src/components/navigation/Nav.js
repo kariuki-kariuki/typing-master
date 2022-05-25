@@ -7,7 +7,7 @@ import "./Nav.css"
 function Nav(){
 
   return (
-    <nav className="container-main p-2 bg-dark ">
+    <nav className="container-main p-5 bg-dark ">
       <br />
       <NavLink to="/">
         <Button text="Home"  bradius="5px" />
