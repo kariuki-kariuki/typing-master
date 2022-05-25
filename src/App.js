@@ -15,7 +15,7 @@ import Nav from './components/navigation/Nav';
 
 function App() {
   return (
-      <div className="container-main h-100">
+      <div className="container-main">
         <div className="row">
           <div className="col-sm-3">
             <Nav />
