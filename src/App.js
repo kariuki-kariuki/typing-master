@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Home from './components/home/Home';
 import Login from './components/login/Login';
 import Nav from './components/navigation/Nav';
+import Dashboard from './components/dashboard/Dashboard';
 // import Home from './components/home/Home';
 // import Test from './components/test/Test';
 // import Login from './components/login/Login';
@@ -27,6 +28,9 @@ function App() {
               </Route>
               <Route path="/login" exact>
                 <Login />
+              </Route>
+              <Route path="/dashboard">
+                <Dashboard />
               </Route>
             </Switch>
 

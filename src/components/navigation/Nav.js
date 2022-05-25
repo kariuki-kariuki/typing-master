@@ -14,6 +14,9 @@ function Nav(){
         <NavLink to="/login">
           <Button text="Login" backColor="#0000" bradius="5px" />
         </NavLink>
+        <NavLink to= "/dashboard">
+          <Button text = "Dashboard" bradius= "5px"/>
+        </NavLink>
 
       <br />
       <hr />
