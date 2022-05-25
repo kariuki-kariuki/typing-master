@@ -1,4 +1,5 @@
 import "./Login.css"
+import { Route, NavLink } from "react-router-dom";
 function Login(){
   return (
     <div className="container-main  login">
@@ -27,7 +28,11 @@ function Login(){
         <br />
         <input type="submit" value="Login" className="submit" /><br />
         <div className="text-center">
-          <p>Don't have an account? <a>Sign Up.</a></p>
+          <p>Don't have an account? 
+              <Route>
+                <NavLink to= "/signup">SignUp</NavLink>
+              </Route>
+             </p>
           <p>Forget Password</p>
         </div>
       </div>
