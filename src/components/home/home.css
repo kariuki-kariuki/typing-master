@@ -5,7 +5,20 @@
 .card-custom{
   box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  background: rgb(190, 180, 180);
+  background: rgba(0, 0, 0, .6);
   border-radius: 5px;
   padding: 10px;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  margin-top: 15vw;
+  padding: 30px;
+}
+
+.home{
+  background-image: url('./wallpaperflare.com_wallpaper\ \(14\).jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100%;
 }
