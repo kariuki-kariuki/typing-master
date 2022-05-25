@@ -16,7 +16,7 @@ function Graph(){
         <span>10 %</span>
       </span>
       <br />
-      <span className="spantwo">Hello</span>
+      <span className="spantwo"><span className="span2">Hello</span></span>
       <br />
 
       <span className="spanthree">Hello</span>
