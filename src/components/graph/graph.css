@@ -21,7 +21,7 @@
   width: 30%;
   display: block;
   background-color: black;
-  border-radius: 8px;
+  border-radius: 20px;
   padding: 4px;
 
   padding-left: 10px;
@@ -31,7 +31,7 @@
   width: 90%;
   display: block;
   background-color: rgb(37, 160, 53);
-  border-radius: 8px;
+  border-radius: 20px;
   padding-left: 10px;
   padding: 4px;
 }
@@ -41,15 +41,16 @@
   padding: 4px;
   display: block;
   background-color: rgb(180, 80, 80);
-  border-radius: 8px;
+  border-radius: 20px;
   padding-left: 10px;
 }
 
 .span5{
   width: 50%;
   display: block;
+  padding: 4px;
   background-color: rgb(201, 201, 75);
-  border-radius: 8px;
+  border-radius: 20px;
   padding-left: 10px;
 }
 
@@ -57,26 +58,26 @@
   width: 500px;
   background-color: white;
   color: azure;
-  border-radius: 8px;
+  border-radius: 20px;
 }
 
 .spanthree{
   width: 100%;
   background-color: beige;
   color: azure;
-  border-radius: 8px;
+  border-radius: 20px;
 }
 
 .spanfour{
   width: 100%;
   background-color: white;
   color: azure;
-  border-radius: 8px;
+  border-radius: 20px;
 }
 
 .spanfive{
   width: 100%;
   background-color: white;
   color: azure;
-  border-radius: 8px;
+  border-radius: 20px;
 }

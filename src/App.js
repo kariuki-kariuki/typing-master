@@ -7,6 +7,7 @@ import Home from './components/home/Home';
 import Login from './components/login/Login';
 import Nav from './components/navigation/Nav';
 import Dashboard from './components/dashboard/Dashboard';
+import Test from './components/test/Test';
 // import Home from './components/home/Home';
 // import Test from './components/test/Test';
 // import Login from './components/login/Login';
@@ -31,6 +32,9 @@ function App() {
               </Route>
               <Route path="/dashboard">
                 <Dashboard />
+              </Route>
+              <Route to = "/test">
+                <Test />
               </Route>
             </Switch>
 

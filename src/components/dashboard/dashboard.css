@@ -3,7 +3,7 @@
   height: 300px;
   background: yellow;
   position: relative;
-  box-shadow: 0 6px 5px 0 yellow;
+  /* box-shadow: 0 6px 5px 0 yellow; */
   text-align: center;
 
 }
@@ -22,4 +22,11 @@
 
 .tn{
   font-size: 32px;
+}
+.h-100{
+  height: 100%;
+  padding: 10px;
+}
+.header{
+  padding: 50px;
 }

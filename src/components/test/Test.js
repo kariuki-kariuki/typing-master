@@ -5,7 +5,7 @@ import KeyBoard from "../keyboard/KeyBoard"
 function Test(){
   const [input, setInput] = useState('')
   const myLeng = input.length;
-  const word = "Test"
+  const word = "Test Kawara"
   console.log(myLeng)
   // console.log(input.length)
   // let myLength = input.length
@@ -23,7 +23,12 @@ function Test(){
   useEffect(() => {
     console.log(word.charAt(myLeng))
     for(let i = 0; i < btn.length; i++){
-      
+      if (
+        btn[i].style.background === "yellow" &&
+        btn[i].innerText !== word.charAt(myLeng).toUpperCase()
+      ) {
+        btn[i].style.background = "black";
+      }
 
 
       if(btn[i].innerText === word.charAt(myLeng -1).toLocaleUpperCase()){
@@ -38,9 +43,7 @@ function Test(){
         btn[i].style.background = "yellow";
       }
 
-      if(btn[i].style.background === 'yellow' && btn[i].innerText !== word.charAt(myLeng).toUpperCase()){
-        btn[i].style.background = 'black'
-      }
+      
     }
   }, [myLeng])
 
