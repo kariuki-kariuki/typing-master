@@ -2,37 +2,81 @@
 .graph{
   width: 100%;
   height: 50vh;
-  color: white;
   padding-left: 20px;
 }
 
 .graph span{
   display: block;
 }
+
 .spanone{
   width: 500px;  
   border-right: 2px solid blue;
   border-left: 1px solid white;
+  padding: 5px;
+  border-radius: 1px;
+  color: wheat;
+}
+.span2{
+  width: 30%;
+  display: block;
+  background-color: black;
+  border-radius: 8px;
+  padding: 4px;
+
+  padding-left: 10px;
 }
 
+.span3{
+  width: 90%;
+  display: block;
+  background-color: rgb(37, 160, 53);
+  border-radius: 8px;
+  padding-left: 10px;
+  padding: 4px;
+}
+
+.span4{
+  width: 70%;
+  padding: 4px;
+  display: block;
+  background-color: rgb(180, 80, 80);
+  border-radius: 8px;
+  padding-left: 10px;
+}
+
+.span5{
+  width: 50%;
+  display: block;
+  background-color: rgb(201, 201, 75);
+  border-radius: 8px;
+  padding-left: 10px;
+}
 
 .spantwo{
   width: 500px;
-  background-color: green;
-  bottom: 0;
+  background-color: white;
+  color: azure;
+  border-radius: 8px;
 }
 
 .spanthree{
   width: 100%;
   background-color: beige;
+  color: azure;
+  border-radius: 8px;
 }
 
 .spanfour{
   width: 100%;
-  background-color: yellow;
+  background-color: white;
+  color: azure;
+  border-radius: 8px;
 }
 
 .spanfive{
   width: 100%;
-  background-color: orange;
+  background-color: white;
+  color: azure;
+  border-radius: 8px;
 }
