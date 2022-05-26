@@ -29,7 +29,7 @@ function Nav(){
       </NavLink>
       <br />
       <br />
-      <NavLink to="/gignup">
+      <NavLink to="/signup">
         SignUp
       </NavLink>
 

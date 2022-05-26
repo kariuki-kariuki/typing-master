@@ -1,26 +1,26 @@
 import "./signup.css";
-// import { useState } from "react";
+import { useState } from "react";
 
 
 function SignUp() {
 
-  // const [userdata, setUserData] = useState({
-  //   name : "",
-  //   email : '',
-  //   password : ''
-  // })
-  // console.log(userdata)
+  const [userdata, setUserData] = useState({
+    name : "",
+    email : '',
+    password : ''
+  })
+  console.log(userdata)
   return (
     <div className="container-main  signup">
-      <div className="signup-card ">
+      <form className="signup-card ">
         <h4>SignUp</h4>
         <span className="span1">Made for developers by developers</span>
         <input
           name="email"
           type="email"
-          // value={userdata.name}
+          value={userdata.name}
           className="inputEmail"
-          // onChange={(e) => setUserData({...userdata, email : e.target.value})}
+          onChange={(e) => setUserData({...userdata, email : e.target.value})}
           placeholder=" &#x1F4E9;  example@gmail.com"
         />
         <br />
@@ -29,8 +29,15 @@ function SignUp() {
         <input
           name="fullName"
           type="text"
+          value={userdata.name}
           className="inputEmail"
           placeholder="    Sammy Doe"
+          onChange={ (e) =>  setUserData(
+            {
+              ...userdata,
+              name : e.target.value
+            }
+          )}
         />
         <br />
         <br />
@@ -38,6 +45,11 @@ function SignUp() {
           className="password"
           type="password"
           name="password"
+          value={userdata.password}
+          onChange = {(e) => setUserData({
+            ...userdata,
+            password : e.target.value
+          })}
           placeholder="&#128272;..........."
         />
         <br />
@@ -53,7 +65,7 @@ function SignUp() {
             {/* Already have an account? <a>Login.</a> */}
           </p>
         </div>
-      </div>
+      </form>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import SignUp from "./components/signup/SignUp";
-// import { Fragment } from 'react';
 import './App.css';
 import {  Route, Routes} from "react-router-dom";
 
@@ -9,11 +8,6 @@ import Login from './components/login/Login';
 import Test from "./components/test/Test";
 import Nav from './components/navigation/Nav';
 import Dashboard from './components/dashboard/Dashboard';
-// import Home from './components/home/Home';
-// import Test from './components/test/Test';
-// import Login from './components/login/Login';
-// import { BrowserRouter, Route, Switch } from 'react-router-dom';
-// import RouterSetUp from './components/BrowserSwitch/RouterSetup';
 
 function App() {
   return (
@@ -26,7 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="test" element={<Test />} />
-            <Route path="gignup" element={<SignUp />} />
+            <Route path="signup" element={<SignUp />} />
             <Route path="login" element={<Login />} />
             <Route path='dashboard' element = {<Dashboard />} />
           </Routes>
