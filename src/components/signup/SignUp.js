@@ -1,5 +1,5 @@
 import "./signup.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 // import axios from "axios";
 
 
@@ -18,7 +18,7 @@ function SignUp(setAcc) {
   //   .then(res => res.data)
   //   .then(res => setEmails(res))
   // }
-
+ 
   // useEffect(() => {
   //   getEmails()
   // }, )

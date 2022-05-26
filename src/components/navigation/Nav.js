@@ -1,9 +1,9 @@
 
-import Button from "../custombtn/Button"
+// import Button from "../custombtn/Button"
 import { NavLink } from "react-router-dom";
 import "./Nav.css"
-import { useState } from "react";
-import Login from "../login/Login";
+// import { useState } from "react";
+// import Login from "../login/Login";
 
 function Nav({login}){
   // const styles = {

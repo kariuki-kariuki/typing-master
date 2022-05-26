@@ -1,7 +1,7 @@
 import "./Login.css"
 import { NavLink } from "react-router-dom";
-import axios from 'axios'
-import { useEffect, useState } from "react";
+// import axios from 'axios'
+import {  useState } from "react";
 
 function Login({acc, setLogin}){
   let [users, setUsers] = useState({
@@ -10,14 +10,14 @@ function Login({acc, setLogin}){
 
   })
 
-  function handleSubmit(){
-    e.preventDefault(){
+  function handleSubmit(e){
+    e.preventDefault()
       if(users.email === acc.email && users.password === acc.password){
         setLogin(true)
       } else {
         alert("user not found: signUp if you do not have an acount")
       }
-    }
+    
   }
   // function getUsers (){
   //     axios.get("http://localhost:4000/users")
@@ -34,7 +34,7 @@ function Login({acc, setLogin}){
 
   return (
     <div className="container-main  login">
-      <div className="login-card ">
+      <form className="login-card " onSubmit={handleSubmit}>
         <h4>Login</h4>
         <span className="span1">Login to manage your account</span>
         <input
@@ -68,7 +68,7 @@ function Login({acc, setLogin}){
              </p>
           <p>Forget Password</p>
         </div>
-      </div>
+      </form>
     </div>
   );
 }
