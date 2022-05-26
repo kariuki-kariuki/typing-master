@@ -16,7 +16,7 @@ function Test(){
   let btn = document.getElementsByClassName("btn-key");
   let [right, setRight] = useState(0)
   let [wrong, setWrong] = useState(0)
-
+  console.log(rateP)
   
   // console.log(count)
   function handleFetch(){
@@ -106,7 +106,7 @@ function Test(){
 
       
     }
-  }, [myLeng, btn])
+  }, [myLeng, btn, word])
 
   function handleInput(e){
     setInput(e.target.value)
