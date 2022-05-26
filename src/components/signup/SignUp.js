@@ -1,5 +1,6 @@
 import "./signup.css";
 import { useState } from "react";
+import axios from "axios";
 
 
 function SignUp() {
@@ -7,18 +8,33 @@ function SignUp() {
   const [userdata, setUserData] = useState({
     name : "",
     email : '',
-    password : ''
+    password : '',
+    id : ''
   })
-  console.log(userdata)
+
+  function handleSubmit(e){
+    e.preventDefault()
+    setUserData({
+      ...userdata, 
+      id :  Math.floor(Math.random() * 2000000)
+    })
+    if(userdata.name !== '' && userdata.email !== '' && userdata.password.length > 5){
+      console.log(userdata)
+    }
+    axios.post("http://localhost:4000/addtask", {
+      userdata
+    })
+  }
+  // console.log(userdata)
   return (
     <div className="container-main  signup">
-      <form className="signup-card ">
+      <form className="signup-card " onSubmit={handleSubmit}>
         <h4>SignUp</h4>
         <span className="span1">Made for developers by developers</span>
         <input
           name="email"
           type="email"
-          value={userdata.name}
+          value={userdata.email}
           className="inputEmail"
           onChange={(e) => setUserData({...userdata, email : e.target.value})}
           placeholder=" &#x1F4E9;  example@gmail.com"

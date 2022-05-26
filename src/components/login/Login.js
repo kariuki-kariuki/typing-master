@@ -1,7 +1,16 @@
 import "./Login.css"
 import { NavLink } from "react-router-dom";
+import axios from 'axios'
 
 function Login(){
+  // let users = []
+  function getUsers (){
+      axios.get("http://localhost:4000/users")
+      .then((res) => res.data)
+      .then(res => console.log(res))
+  }
+
+
   return (
     <div className="container-main  login">
       <div className="login-card ">
