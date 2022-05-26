@@ -5,7 +5,7 @@ import KeyBoard from "../keyboard/KeyBoard"
 function Test(){
   const [input, setInput] = useState('')
   const myLeng = input.length;
-  const word = "Test Kawara"
+  const word = "Test "
   console.log(myLeng)
   // console.log(input.length)
   // let myLength = input.length
