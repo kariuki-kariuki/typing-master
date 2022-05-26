@@ -1,9 +1,9 @@
 import "./signup.css";
 import { useState, useEffect } from "react";
-import axios from "axios";
+// import axios from "axios";
 
 
-function SignUp() {
+function SignUp(setAcc) {
 
   const [userdata, setUserData] = useState({
     name : "",
@@ -12,33 +12,41 @@ function SignUp() {
     id : ''
   })
 
-  const [ emails, setEmails] = useState([])
-  const getEmails = () =>{
-    axios.get("http://localhost:4000/email")
-    .then(res => res.data)
-    .then(res => setEmails(res))
-  }
+  // const [ emails, setEmails] = useState([])
+  // const getEmails = () =>{
+  //   axios.get("http://localhost:4000/email")
+  //   .then(res => res.data)
+  //   .then(res => setEmails(res))
+  // }
 
-  useEffect(() => {
-    getEmails()
-  }, )
-  console.log(emails)
+  // useEffect(() => {
+  //   getEmails()
+  // }, )
+  // console.log(emails)
 
-  
-  
   function handleSubmit(e){
     e.preventDefault()
     setUserData({
       ...userdata, 
       id :  Math.floor(Math.random() * 2000000)
     })
-    if(userdata.name !== '' && userdata.email !== '' && userdata.password.length > 5){
-      console.log(userdata)
-    }
-    axios.post("http://localhost:4000/addtask", {
-      userdata
-    })
+
+    setAcc(userdata)
   }
+  
+  // function handleSubmit(e){
+  //   e.preventDefault()
+  //   setUserData({
+  //     ...userdata, 
+  //     id :  Math.floor(Math.random() * 2000000)
+  //   })
+  //   if(userdata.name !== '' && userdata.email !== '' && userdata.password.length > 5){
+  //     console.log(userdata)
+  //   }
+  //   axios.post("http://localhost:4000/addtask", {
+  //     userdata
+  //   })
+  // }
   // console.log(userdata)
   return (
     <div className="container-main  signup">

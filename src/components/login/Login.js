@@ -3,19 +3,34 @@ import { NavLink } from "react-router-dom";
 import axios from 'axios'
 import { useEffect, useState } from "react";
 
-function Login(){
-  let [users, setUsers] = useState([])
-  function getUsers (){
-      axios.get("http://localhost:4000/users")
-      .then((res) => res.data)
-      .then(res => setUsers(res))
+function Login({acc, setLogin}){
+  let [users, setUsers] = useState({
+    email : '',
+    password : ''
+
+  })
+
+  function handleSubmit(){
+    e.preventDefault(){
+      if(users.email === acc.email && users.password === acc.password){
+        setLogin(true)
+      } else {
+        alert("user not found: signUp if you do not have an acount")
+      }
+    }
   }
-  console.log(users)
+  // function getUsers (){
+  //     axios.get("http://localhost:4000/users")
+  //     .then((res) => res.data)
+  //     .then(res => setUsers(res))
+  // }
+  // console.log(users)
 
-  useEffect(() => {
-    getUsers()
-  }, [])
+  // useEffect(() => {
+  //   getUsers()
+  // }, [])
 
+  
 
   return (
     <div className="container-main  login">
@@ -25,16 +40,20 @@ function Login(){
         <input
           name="email"
           type="email"
+          value={users.email}
           className="inputEmail"
           placeholder=" &#x1F4E9;  example@gmail.com"
+          onChange={(e) => setUsers({...users, email : e.target.value})}
         />
         <br />
         <br />
         <input
           className="password"
           type="password"
+          value={users.password}
           name="password"
           placeholder="&#128272;..........."
+          onChange={(e) => setUsers({...users, password : e.target.value})}
         />
         <br />
         <br />
