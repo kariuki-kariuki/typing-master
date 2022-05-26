@@ -24,7 +24,7 @@ function SignUp() {
   }, [])
   console.log(emails)
 
-  
+
   
   function handleSubmit(e){
     e.preventDefault()
@@ -32,12 +32,26 @@ function SignUp() {
       ...userdata, 
       id :  Math.floor(Math.random() * 2000000)
     })
-    if(userdata.name !== '' && userdata.email !== '' && userdata.password.length > 5){
-      console.log(userdata)
+
+    
+    function handleVerification(){
+      if(userdata.name === '' && userdata.email === '' && userdata.password.length < 8){
+            alert("Inverlid Inputs")
+      } else {
+        for (let i = 0; i < emails.length; i++) {
+          if (emails[i].email === userdata.email) {
+            alert("Email Taken");
+          } else {
+            axios.post("http://localhost:4000/adduser", {
+              userdata,
+            });
+          }
+        }
+      }
     }
-    axios.post("http://localhost:4000/addtask", {
-      userdata
-    })
+
+    
+    
   }
   // console.log(userdata)
   return (
