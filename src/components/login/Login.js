@@ -1,14 +1,20 @@
 import "./Login.css"
 import { NavLink } from "react-router-dom";
 import axios from 'axios'
+import { useEffect, useState } from "react";
 
 function Login(){
-  // let users = []
+  let [users, setUsers] = useState([])
   function getUsers (){
       axios.get("http://localhost:4000/users")
       .then((res) => res.data)
-      .then(res => console.log(res))
+      .then(res => setUsers(res))
   }
+  console.log(users)
+
+  useEffect(() => {
+    getUsers()
+  }, [])
 
 
   return (
