@@ -1,5 +1,5 @@
 import "./signup.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 
@@ -12,6 +12,20 @@ function SignUp() {
     id : ''
   })
 
+  const [ emails, setEmails] = useState([])
+  const getEmails = () =>{
+    axios.get("http://localhost:4000/email")
+    .then(res => res.data)
+    .then(res => setEmails(res))
+  }
+
+  useEffect(() => {
+    getEmails()
+  }, [])
+  console.log(emails)
+
+  
+  
   function handleSubmit(e){
     e.preventDefault()
     setUserData({
