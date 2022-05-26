@@ -5,8 +5,20 @@ import KeyBoard from "../keyboard/KeyBoard"
 function Test(){
   const [input, setInput] = useState('')
   const myLeng = input.length;
-  const word = "Test "
-  console.log(myLeng)
+  const word = "Testme My name is kariuki kariuki"
+  // console.log(word.length)
+
+  function calculateTime(){
+    let charLenght = word.length
+    let time = charLenght / 3 * 60
+    let tt = 10
+
+
+
+    console.log((charLenght/3)/ (30/60))
+  }
+  calculateTime()
+  // console.log(myLeng)
   // console.log(input.length)
   // let myLength = input.length
   // let buttons = document.getElementsByClassName("btn-key");
