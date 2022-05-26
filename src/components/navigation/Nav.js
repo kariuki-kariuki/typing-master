@@ -9,23 +9,28 @@ function Nav(){
     <nav className="container-main p-5 ">
       <br />
       <NavLink to="/">
-        <Button text="Home"  bradius="5px" />
+        Home
       </NavLink>
       <br />
       <br />
-      <NavLink to= "/test">
-        <Button text='Test'  bradius = "5px" />
+      <NavLink to="/test">
+        Test
       </NavLink>
       <br />
       <br />
       <NavLink to="/login">
-        <Button text="Login"  bradius="5px" />
+        Login
       </NavLink>
       <br />
       <br />
 
       <NavLink to="/dashboard">
-        <Button text="Dashboard" bradius="5px" />
+        Dashboard
+      </NavLink>
+      <br />
+      <br />
+      <NavLink to="/gignup">
+        SignUp
       </NavLink>
 
       <br />
