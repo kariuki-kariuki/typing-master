@@ -1,0 +1,22 @@
+.test{
+  height: 100vh;
+  background-image: url("./wallpaperflare.com_wallpaper\ \(15\).jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.start{
+  background-color: green;
+  padding: 5px;
+  border-radius: 5px;
+  float: left;
+  width: 19vh;
+}
+
+.stop{
+  background-color: red;
+  border-radius: 5px;
+  padding: 5px;
+  float: right;
+  width: 19vh;
+}
