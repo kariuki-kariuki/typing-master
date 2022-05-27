@@ -15,39 +15,54 @@ function Nav({login}){
     <>
       <nav className="container-main p-5 .d-none .d-lg-block .d-xl-none">
         <br />
-        <NavLink style={{ color: "white", fontSize: "32px" }} to="/">
+        <NavLink
+          style={{ color: "white", fontSize: "32px" }}
+          to="refactored-system/"
+        >
           #Home
         </NavLink>
         <br />
         <br />
-        <NavLink style={{ color: "white", fontSize: "32px" }} to="/test">
+        <NavLink
+          style={{ color: "white", fontSize: "32px" }}
+          to="refactored-system/test"
+        >
           #Test
         </NavLink>
         <br />
         <br />
         <NavLink
           style={{ color: "white", fontSize: "32px" }}
-          to={login ? null : "/login"}
+          to={login ? null : "refactored-system/login"}
         >
           #Login
         </NavLink>
         <br />
         <br />
 
-        <NavLink style={{ color: "white", fontSize: "32px" }} to="/dashboard">
+        <NavLink
+          style={{ color: "white", fontSize: "32px" }}
+          to="refactored-system/dashboard"
+        >
           #Dashboard
         </NavLink>
         <br />
         <br />
-        <NavLink style={{ color: "white", fontSize: "32px" }} to="/signup">
+        <NavLink
+          style={{ color: "white", fontSize: "32px" }}
+          to="refactored-system/signup"
+        >
           #SignUp
         </NavLink>
 
         <br />
         <hr />
       </nav>
-      <header className=".d-none .d-sm-block .d-md-none">
-        <NavLink style={{ color: "white", fontSize: "15px" }} to="/">
+      <header className=".d-none .d-sm-block .d-md-none .d-lg-none">
+        <NavLink
+          style={{ color: "white", fontSize: "15px" }}
+          to="refactored-system/"
+        >
           Home
         </NavLink>
         <NavLink style={{ color: "white", fontSize: "15px" }} to="/test">

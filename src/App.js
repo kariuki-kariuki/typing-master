@@ -18,15 +18,24 @@ function App() {
     <div className="container-main">
       <div className="row">
         <div className="col-sm-3">
-          <Nav login = {login}/>
+          <Nav login={login} />
         </div>
         <div className="col-sm-9">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="test" element={<Test />} />
-            <Route path="signup" element={<SignUp setAcc = {setAcc} />} />
-            <Route path="login" element={ <Login acc = {acc} setLogin = {setLogin}/>} />
-            <Route path='dashboard' element = {<Dashboard />} />
+            <Route path="refactored-system/" element={<Home />} />
+            <Route path="refactored-system/test" element={<Test />} />
+            <Route
+              path="refactored-system/signup"
+              element={<SignUp setAcc={setAcc} />}
+            />
+            <Route
+              path="refactored-system/login"
+              element={<Login acc={acc} setLogin={setLogin} />}
+            />
+            <Route
+              path="refactored-system/dashboard"
+              element={<Dashboard />}
+            />
           </Routes>
 
           {/* <RouterSetUp /> */}
