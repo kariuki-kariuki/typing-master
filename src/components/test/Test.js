@@ -1,16 +1,17 @@
 import "./test.css"
 import { useEffect, useState } from "react"
 import KeyBoard from "../keyboard/KeyBoard"
-
+import Countdown from "./Timer"
 
 
 function Test(){
   const [input, setInput] = useState('')
   const myLeng = input.length;
   const [word, setwords] = useState('')
-  const [keyEnter, setKeyEnter] = useState(false)
+  // const [keyEnter, setKeyEnter] = useState(false)
   const [rateP, setRatep] = useState(0)
   // const d = new Date()
+  const wordLeng = word.length
   const [rates, setRate] = useState(0)
   let [count, setCount] = useState(0)
   let btn = document.getElementsByClassName("btn-key");
@@ -34,7 +35,6 @@ function Test(){
           setCount(0)
           setwords(response.content)
           console.log(response.content)
-          setKeyEnter(true)
           
           for(let i = 0; i < btn.length; i++){
             if(btn[i].innerText === response.content.charAt(0).toUpperCase()){
@@ -47,20 +47,6 @@ function Test(){
   }
 
   // handleFetch()
-  function handleCount(){
-    setCount(count + 1)
-  }
-
-  if (keyEnter) {
-    setInterval(handleCount, 1000);
-  }
-
-  // let date = 
-
-  
-
-
-  // console.log(word.length)
 
   function calculateTime(){
     let charLenght = word.length
@@ -70,14 +56,6 @@ function Test(){
     let rate = charLenght / 3 / (tt / 60);
     setRate(rate)
     setRatep(rateTime)
-    
-
-    // if(keyEnter){
-      // setInterval(setCount(count - 1))
-    // }
-    // let err = errs/charLenght * 100
-    // let acc = 100 - err
-
   }
   
 
@@ -103,14 +81,11 @@ function Test(){
       } else if (word.charAt(myLeng) === " " && btn[i].innerText === "space") {
         btn[i].style.background = "yellow";
       }
-
-      
     }
   }, [myLeng, btn, word])
 
   function handleInput(e){
     setInput(e.target.value)
-    setKeyEnter(true)
 
     // setMylength(() => input.length)
     console.log(myLeng);
@@ -119,30 +94,39 @@ function Test(){
   }
 
   function handleInputs(){
-    for(let i = 0; i < word.length; i++){
-      if(word.charAt(i) === input.charAt(i)){
-        setRight(right + 1)
-      } else {
-        setWrong(wrong + 1)
-      }
-    }
-    calculateTime();
+    if(myLeng < word.length){
+      alert("Not complete")
+    } else {
+        for (let i = 0; i < word.length; i++) {
+          if (word.charAt(i) === input.charAt(i)) {
+            setRight(right + 1);
+          } else {
+            setWrong(wrong + 1);
+          }
+        }
+        console.log((right / word.length) * 100);
+        calculateTime();
 
-    setKeyEnter(false)
-    setCount(0)
-    setInput('')
-    setwords('')
+        setCount(0);
+        setInput("");
+        setwords("");
+    }
+    
   }
 
   return (
-    <div className="container-main test">
-      <button className="start" onClick={handleFetch}>
-        Start
-      </button>
-      <button className="stop" onClick={handleInputs}>
-        Stop
-      </button> <br /> <br />
+    <div className="container-main p-3 test">
       <h1>{Math.floor(rates)} WPM</h1>
+
+      <Countdown
+        setCount={setCount}
+        handleFetch={handleFetch}
+        handleInput={handleInputs}
+        myLeng={myLeng}
+        wordLeng={wordLeng}
+        setwords={setwords}
+      />
+      <div className="textToDisplay">{word}</div>
 
       <KeyBoard input={input} handleInput={handleInput} />
     </div>

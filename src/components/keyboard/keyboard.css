@@ -6,10 +6,10 @@
     height: auto;
     grid-template-columns: repeat(15, 50px);
     grid-template-rows: minmax(50px, auto) repeat(7, 50px);
-    padding: 20px;
+    padding: 0px;
     gap : 3px;
     text-align: center;
-    margin-top: 15vh;
+    
     /* background-color: blueviolet; */
 }
 

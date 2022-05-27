@@ -4,7 +4,7 @@ import { useState } from "react";
 import { logout, signup, useAuth } from "../../firebase";
 
 function SignUp({setAcc}) {
-  const [loading, setLoading] = useState()
+  // const [loading, setLoading] = useState()
 
   const currentUser = useAuth();
 
@@ -51,6 +51,7 @@ function SignUp({setAcc}) {
     })
 
     setAcc(userdata)
+    handleSignup()
     // console(userdata)
     setUserData({...userdata, email : '', password : '', name : ''})
     console.log("userdata ", userdata)

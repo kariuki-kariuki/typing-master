@@ -72,7 +72,7 @@ function Login({acc, setLogin}){
         <span> Remember Me?</span>
         <br />
         <br />
-        <input type="submit" value="Login"disabled =  className="submit" /><br />
+        <input type="submit" value="Login"  className="submit" /><br />
         <div className="text-center">
           <p>Don't have an account? 
                 <NavLink to= "/signup" >SignUp</NavLink>
