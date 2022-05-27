@@ -33,7 +33,7 @@ function Nav({login}){
         <br />
         <NavLink
           style={{ color: "white", fontSize: "32px" }}
-          to={login ? null : "refactored-system/login"}
+          to="refactored-system/login"
         >
           #Login
         </NavLink>
@@ -58,7 +58,7 @@ function Nav({login}){
         <br />
         <hr />
       </nav>
-      <header className=".d-none .d-sm-block .d-md-none .d-lg-none">
+      <header className="">
         <NavLink
           style={{ color: "white", fontSize: "15px" }}
           to="refactored-system/"
@@ -70,14 +70,20 @@ function Nav({login}){
         </NavLink>
         <NavLink
           style={{ color: "white", fontSize: "15px" }}
-          to={login ? null : "/login"}
+          to="refactored-system/login"
         >
           Login
         </NavLink>
-        <NavLink style={{ color: "white", fontSize: "15px" }} to="/dashboard">
+        <NavLink
+          style={{ color: "white", fontSize: "15px" }}
+          to="refactored-system/dashboard"
+        >
           Dashboard
         </NavLink>
-        <NavLink style={{ color: "white", fontSize: "15px" }} to="/signup">
+        <NavLink
+          style={{ color: "white", fontSize: "15px" }}
+          to="refactored-system/signup"
+        >
           SignUp
         </NavLink>
       </header>

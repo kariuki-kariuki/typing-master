@@ -11,9 +11,10 @@ function Login({acc, setLogin}){
   })
 
   function handleSubmit(e){
-    e.preventDefault()
+    e.preventDefault();
       if(users.email === acc.email && users.password === acc.password){
         setLogin(true)
+        setUsers({...users, email : "", password : ''})
       } else {
         alert("user not found: signUp if you do not have an acount")
       }

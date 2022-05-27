@@ -3,7 +3,7 @@ import { useState } from "react";
 // import axios from "axios";
 
 
-function SignUp(setAcc) {
+function SignUp({setAcc}) {
 
   const [userdata, setUserData] = useState({
     name : "",
@@ -32,6 +32,9 @@ function SignUp(setAcc) {
     })
 
     setAcc(userdata)
+    // console(userdata)
+    setUserData({...userdata, email : '', password : '', name : ''})
+    console.log("userdata ", userdata)
   }
   
   // function handleSubmit(e){
