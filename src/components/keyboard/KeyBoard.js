@@ -3,7 +3,10 @@ import "./keyboard.css"
 
 function KeyBoard({input, handleInput}){
   return (
-    <div className="container-fluid tests" id="Test">
+    <div
+      className="container-fluid tests .d-none .d-lg-block .d-xl-none"
+      id="Test"
+    >
       <div className="container-main buttons">
         <div className="output">
           <p className="myOutput">{input}</p>
@@ -13,7 +16,7 @@ function KeyBoard({input, handleInput}){
             value={input}
             onChange={handleInput}
             required
-            placeholder = "Type Here"
+            placeholder="Type Here"
           />
         </div>
         <div className="half-btn btn-key"> ` </div>
