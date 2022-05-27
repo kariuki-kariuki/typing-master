@@ -1,9 +1,12 @@
 import "./signup.css";
 import { useState } from "react";
 // import axios from "axios";
-
+import { logout, signup, useAuth } from "../../firebase";
 
 function SignUp({setAcc}) {
+  const [loading, setLoading] = useState()
+
+  const currentUser = useAuth();
 
   const [userdata, setUserData] = useState({
     name : "",
@@ -11,6 +14,22 @@ function SignUp({setAcc}) {
     password : '',
     id : ''
   })
+
+  async function handelLogout(){
+    try{
+      await logout()
+    } catch {
+      alert("Error")
+    }
+  }
+
+  async function handleSignup() {
+    try {
+      await signup(userdata.email, userdata.password);
+    } catch {
+      alert("Email taken");
+    }
+  }
 
   // const [ emails, setEmails] = useState([])
   // const getEmails = () =>{

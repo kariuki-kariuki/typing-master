@@ -2,6 +2,7 @@ import "./Login.css"
 import { NavLink } from "react-router-dom";
 // import axios from 'axios'
 import {  useState } from "react";
+import { login } from "../../firebase";
 
 function Login({acc, setLogin}){
   let [users, setUsers] = useState({
@@ -10,10 +11,19 @@ function Login({acc, setLogin}){
 
   })
 
+  async function handleLogin(){
+    try{
+      await login(users.email, users.password)
+    } catch {
+      alert("invalid password or email")
+    }
+  }
+
   function handleSubmit(e){
     e.preventDefault();
-      if(users.email === acc.email && users.password === acc.password){
-        setLogin(true)
+      if(users.email !== '' && users.password !== ''){
+        // setLogin(true)
+        handleLogin()
         setUsers({...users, email : "", password : ''})
       } else {
         alert("user not found: signUp if you do not have an acount")
@@ -62,7 +72,7 @@ function Login({acc, setLogin}){
         <span> Remember Me?</span>
         <br />
         <br />
-        <input type="submit" value="Login" className="submit" /><br />
+        <input type="submit" value="Login"disabled =  className="submit" /><br />
         <div className="text-center">
           <p>Don't have an account? 
                 <NavLink to= "/signup" >SignUp</NavLink>
