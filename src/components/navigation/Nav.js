@@ -65,7 +65,7 @@ function Nav({login}){
         >
           Home
         </NavLink>
-        <NavLink style={{ color: "white", fontSize: "15px" }} to="/test">
+        <NavLink style={{ color: "white", fontSize: "15px" }} to="refactored-system/test">
           Test
         </NavLink>
         <NavLink
