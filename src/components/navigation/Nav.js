@@ -25,7 +25,7 @@ function Nav({login}){
         <br />
         <NavLink
           style={{ color: "white", fontSize: "32px" }}
-          to="refactored-system/"
+          to="/"
         >
           #Home
         </NavLink>
@@ -33,7 +33,7 @@ function Nav({login}){
         <br />
         <NavLink
           style={{ color: "white", fontSize: "32px" }}
-          to="refactored-system/test"
+          to="/test"
         >
           #Test
         </NavLink>
@@ -41,7 +41,7 @@ function Nav({login}){
         <br />
         <NavLink
           style={{ color: "white", fontSize: "32px" }}
-          to="refactored-system/login"
+          to="/login"
         >
           #Login
         </NavLink>
@@ -50,7 +50,7 @@ function Nav({login}){
 
         <NavLink
           style={{ color: "white", fontSize: "32px" }}
-          to="refactored-system/dashboard"
+          to="/dashboard"
         >
           #Dashboard
         </NavLink>
@@ -58,7 +58,7 @@ function Nav({login}){
         <br />
         <NavLink
           style={{ color: "white", fontSize: "32px" }}
-          to="refactored-system/signup"
+          to="/signup"
         >
           #SignUp
         </NavLink>
@@ -78,32 +78,32 @@ function Nav({login}){
       <header className={display ? "block" : "none"}>
         <NavLink
           style={{ color: "white", fontSize: "15px" }}
-          to="refactored-system/"
+          to="/"
         >
           <i className="fa fa-house-damage fa-fw"></i> Home
         </NavLink>
         <NavLink
           style={{ color: "white", fontSize: "15px" }}
-          to="refactored-system/test"
+          to="/test"
         >
           <i className="fa fa-hourglass-half fa-fw"></i> Test
         </NavLink>
         <NavLink
           style={{ color: "white", fontSize: "15px" }}
-          to="refactored-system/dashboard"
+          to="/dashboard"
         >
           <i className="fa fa-th fa-fw"></i>  Dashboard
         </NavLink>
         <NavLink
           style={{ color: "white", fontSize: "15px" }}
-          to="refactored-system/login"
+          to="/login"
         >
           <i className="fa fa-unlock-alt"></i>  Login
         </NavLink>
 
         <NavLink
           style={{ color: "white", fontSize: "15px" }}
-          to="refactored-system/signup"
+          to="/signup"
         >
           <i className="fa fa-user-plus fa-fw"></i>  SignUp
         </NavLink>
