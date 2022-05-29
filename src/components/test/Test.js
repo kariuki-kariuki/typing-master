@@ -10,19 +10,15 @@ function Test(){
   const [input, setInput] = useState('')
   const myLeng = input.length;
   const [word, setwords] = useState('')
-  // const [keyEnter, setKeyEnter] = useState(false)
   const [rateP, setRatep] = useState(0)
-  // const d = new Date()
   const wordLeng = word.length
   const [rates, setRate] = useState(0)
   let [count, setCount] = useState(0)
   let btn = document.getElementsByClassName("btn-key");
-  let [right, setRight] = useState(0)
-  let [wrong, setWrong] = useState(0)
-  // console.log(rateP)
+  let right = 0
+  let wrong = 0
 
   
-  // console.log(count)
   function handleFetch(){
       const options = {
         method: "GET",
@@ -108,28 +104,44 @@ function Test(){
     setInput(e.target.value)
 
     // setMylength(() => input.length)
-    console.log(myLeng);
+    // console.log(myLeng);
 
     // handleColor()
+  }
+  function calculateRight(){
+    for (let i = 0; i < word.length; i++) {
+      if (word.charAt(i) === input.charAt(i)) {
+        right += 1
+        console.log(
+          `value of i ${i} word char at i ${word.charAt(
+            i
+          )} input char at i ${input.charAt(i)}`
+        );
+      } else {
+        wrong += 1
+      }
+    }
   }
 
   function handleInputs(){
     if(myLeng < word.length){
       alert("Not complete")
     } else {
-        for (let i = 0; i < word.length; i++) {
-          if (word.charAt(i) === input.charAt(i)) {
-            setRight(right + 1);
-          } else {
-            setWrong(wrong + 1);
-          }
-        }
-        console.log((right / word.length) * 100);
+        
+      calculateRight()
+        console.log(myLeng)
+        console.log(word.length)
+        console.log(input)
+        console.log(word)
+        console.log("The right count is ", right);
+        console.log("The wrong count is ", wrong);
         calculateTime();
 
         setCount(0);
+        // setRight(0)
         setInput("");
         setwords("");
+        // setWrong(0)
         console.log(right)
     }
     
