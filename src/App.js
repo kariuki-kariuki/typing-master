@@ -26,9 +26,9 @@ function App() {
         </div>
         <div className="col-sm-9">
           <Routes>
-            <Route path="keyboard-worrior/" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route
-              path="keyboard-worrior/test"
+              path="/test"
               element={
                 <Test
                   setErrRate={setErrRate}
@@ -39,15 +39,15 @@ function App() {
               }
             />
             <Route
-              path="keyboard-worrior/signup"
+              path="/signup"
               element={<SignUp setAcc={setAcc} />}
             />
             <Route
-              path="keyboard-worrior/login"
+              path="/login"
               element={<Login acc={acc} setLogin={setLogin} />}
             />
             <Route
-              path="keyboard-worrior/dashboard"
+              path="/dashboard"
               element={
                 <Dashboard
                   wpm={wpm}
