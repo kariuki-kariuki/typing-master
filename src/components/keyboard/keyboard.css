@@ -95,6 +95,7 @@
 @media only screen and (max-width: 600px) {
     .sm-myInput{
         display: block;
+        height: 100px;
         
     }
     .tests{
