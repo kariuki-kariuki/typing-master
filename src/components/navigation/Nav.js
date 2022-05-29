@@ -1,15 +1,23 @@
 
 // import Button from "../custombtn/Button"
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Nav.css"
 // import { useState } from "react";
+
 // import Login from "../login/Login";
 
 function Nav({login}){
+
+  const [display, setDisplay] = useState(false)
   // const styles = {
   //   ba
   // }
   // const [login, setLogin] = useState(false)
+
+  function handleBreadCrumb(){
+    setDisplay(!display)
+  }
 
   return (
     <>
@@ -58,7 +66,8 @@ function Nav({login}){
         <br />
         <hr />
       </nav>
-      <header className="">
+      <button className="breadcrumb" onClick={ handleBreadCrumb }></button>
+      <header className={ display ? "block" : "none"}>
         <NavLink
           style={{ color: "white", fontSize: "15px" }}
           to="refactored-system/"

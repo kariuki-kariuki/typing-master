@@ -5,6 +5,14 @@ nav{
 
 }
 
+.block{
+  visibility: visible;
+}
+
+.none{
+  visibility: hidden;
+}
+
 header{
   background: rgb(25, 21, 42);
   display: flex;
@@ -13,7 +21,7 @@ header{
   justify-content: space-around;
   align-items: center;
   padding-top: 20px;
-  z-index: 1000;
+  z-index: 1;
   top: 0;
   height: 100%;
   position: fixed;
@@ -25,9 +33,15 @@ header a{
   background: rgba(238, 0, 255, .3);
   width: 70%;
   border-radius: 6px;
-  
+}
 
-
+.breadcrumb{
+  z-index: 12;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-right: 10px;
+  margin-top: 10px;
 }
 
 header a:hover{
