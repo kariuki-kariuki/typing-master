@@ -36,6 +36,7 @@ export default function Countdown({ setCount, handleFetch, handleInput, myLeng ,
       setstart(false);
       clearInterval(intervalRef.current);
       handleInput()
+      setNum(0);
       
     }
     

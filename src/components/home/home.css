@@ -30,7 +30,9 @@ h1 {
   
   .card-custom{
     width: 100%;
-    margin-top: 25vh;
+    padding-top: 25vh;
+    height: 100vh;
+    margin: 5px;
   }
   
 }
