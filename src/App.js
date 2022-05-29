@@ -26,24 +26,34 @@ function App() {
         </div>
         <div className="col-sm-9">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/test" element={<Test setErrRate = {setErrRate} setAccuracy = {setAccuracy} setWpm = {setWpm} setTimespeed ={ setTimespeed }/>} />
+            <Route path="keyboard-worrior/" element={<Home />} />
             <Route
-              path="/signup"
+              path="keyboard-worrior/test"
+              element={
+                <Test
+                  setErrRate={setErrRate}
+                  setAccuracy={setAccuracy}
+                  setWpm={setWpm}
+                  setTimespeed={setTimespeed}
+                />
+              }
+            />
+            <Route
+              path="keyboard-worrior/signup"
               element={<SignUp setAcc={setAcc} />}
             />
             <Route
-              path="/login"
+              path="keyboard-worrior/login"
               element={<Login acc={acc} setLogin={setLogin} />}
             />
             <Route
-              path="/dashboard"
+              path="keyboard-worrior/dashboard"
               element={
                 <Dashboard
                   wpm={wpm}
                   errorRate={errorRate}
                   accuracy={accuracy}
-                  timespeed = {timespeed}
+                  timespeed={timespeed}
                 />
               }
             />
