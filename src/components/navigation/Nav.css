@@ -6,18 +6,27 @@ nav{
 }
 
 header{
-  background: #111;
+  background: rgb(25, 21, 42);
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
   padding-top: 20px;
   z-index: 1000;
   top: 0;
+  height: 100%;
   position: fixed;
 }
 
 header a{
-  padding-left: 10px;
-  background: rgba(86, 82, 82, 0.2);
+  padding: 10px;
+  width: fit-content;
+  background: rgba(238, 0, 255, .3);
+  width: 70%;
+  border-radius: 6px;
+  
+
 
 }
 
