@@ -26,18 +26,18 @@ function App() {
         </div>
         <div className="col-sm-9">
           <Routes>
-            <Route path="refactored-system/" element={<Home />} />
-            <Route path="refactored-system/test" element={<Test setErrRate = {setErrRate} setAccuracy = {setAccuracy} setWpm = {setWpm} setTimespeed ={ setTimespeed }/>} />
+            <Route path="/refactored-system/" element={<Home />} />
+            <Route path="/refactored-system/test" element={<Test setErrRate = {setErrRate} setAccuracy = {setAccuracy} setWpm = {setWpm} setTimespeed ={ setTimespeed }/>} />
             <Route
-              path="refactored-system/signup"
+              path="/refactored-system/signup"
               element={<SignUp setAcc={setAcc} />}
             />
             <Route
-              path="refactored-system/login"
+              path="/refactored-system/login"
               element={<Login acc={acc} setLogin={setLogin} />}
             />
             <Route
-              path="refactored-system/dashboard"
+              path="/refactored-system/dashboard"
               element={
                 <Dashboard
                   wpm={wpm}
