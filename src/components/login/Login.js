@@ -54,7 +54,7 @@ function Login({acc, setLogin}){
           value={users.email}
           className="inputEmail"
           placeholder=" &#x1F4E9;  example@gmail.com"
-          onChange={(e) => setUsers({...users, email : e.target.value})}
+          onChange={(e) => setUsers({ ...users, email: e.target.value })}
         />
         <br />
         <br />
@@ -64,7 +64,7 @@ function Login({acc, setLogin}){
           value={users.password}
           name="password"
           placeholder="&#128272;..........."
-          onChange={(e) => setUsers({...users, password : e.target.value})}
+          onChange={(e) => setUsers({ ...users, password: e.target.value })}
         />
         <br />
         <br />
@@ -72,11 +72,13 @@ function Login({acc, setLogin}){
         <span> Remember Me?</span>
         <br />
         <br />
-        <input type="submit" value="Login"  className="submit" /><br />
+        <input type="submit" value="Login" className="submit" />
+        <br />
         <div className="text-center">
-          <p>Don't have an account? 
-                <NavLink to= "/signup" >SignUp</NavLink>
-             </p>
+          <p>
+            Don't have an account?
+            <NavLink to="/refactored-system/signup"> SignUp</NavLink>
+          </p>
           <p>Forget Password</p>
         </div>
       </form>
