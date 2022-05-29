@@ -9,7 +9,7 @@
 }
 
 .spanone{
-  width: 500px;  
+  width: 100%;  
   border-right: 2px solid blue;
   border-left: 1px solid white;
   padding: 5px;
@@ -17,26 +17,28 @@
   color: white;
 }
 .span2{
-  width: 30%;
   display: block;
-  background-color: black;
+  height: 14px;
+  background-color: orange;
   border-radius: 20px;
   padding: 4px;
   padding-left: 10px;
 }
 
 .span3{
-  width: 90%;
+  height: 14px;
   display: block;
   background-color: rgb(37, 160, 53);
   border-radius: 20px;
   padding-left: 10px;
   padding: 4px;
 }
-
+p{
+  color: white;
+}
 .span4{
-  width: 70%;
   padding: 4px;
+  height: 14px;
   display: block;
   background-color: rgb(180, 80, 80);
   border-radius: 20px;
@@ -53,7 +55,7 @@
 }
 
 .spantwo{
-  width: 500px;
+  width: 100%;
   background-color: white;
   color: azure;
   border-radius: 20px;

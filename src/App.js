@@ -14,6 +14,10 @@ function App() {
 
   const [login, setLogin] = useState(false)
   const [acc, setAcc] = useState({})
+  const [wpm, setWpm] = useState(20)
+  const [errorRate, setErrRate] = useState(50)
+  const [accuracy, setAccuracy] = useState(40)
+  const [timespeed, setTimespeed] = useState(40)
   return (
     <div className="container-main">
       <div className="row">
@@ -23,7 +27,7 @@ function App() {
         <div className="col-sm-9">
           <Routes>
             <Route path="refactored-system/" element={<Home />} />
-            <Route path="refactored-system/test" element={<Test />} />
+            <Route path="refactored-system/test" element={<Test setErrRate = {setErrRate} setAccuracy = {setAccuracy} setWpm = {setWpm} setTimespeed ={ setTimespeed }/>} />
             <Route
               path="refactored-system/signup"
               element={<SignUp setAcc={setAcc} />}
@@ -34,7 +38,14 @@ function App() {
             />
             <Route
               path="refactored-system/dashboard"
-              element={<Dashboard />}
+              element={
+                <Dashboard
+                  wpm={wpm}
+                  errorRate={errorRate}
+                  accuracy={accuracy}
+                  timespeed = {timespeed}
+                />
+              }
             />
           </Routes>
 

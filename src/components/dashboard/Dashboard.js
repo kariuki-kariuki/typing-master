@@ -1,7 +1,8 @@
 import "./dashboard.css"
 import Graph from "../graph/Graph";
-function Dashboard(){
 
+
+function Dashboard({wpm, errorRate, accuracy, timespeed}) {
   return (
     <div className="container-main  h-100">
       <div className="header text-white text-center">
@@ -11,20 +12,23 @@ function Dashboard(){
         <div className="col-sm-4">
           <div className="mycard d-flex align-items-center flex-row justify-content-center">
             <div className="circle text-center d-flex align-items-center flex-row justify-content-center">
-              <span className="tn">17K</span>
-              <span className="tText">tests</span>
+              <span className="tn">{Math.floor(wpm)}</span>
+              <span className="tText">WPM</span>
             </div>
           </div>
         </div>
         <div className="=col-sm-8">
           <div className="myGraph">
-            <Graph />
+            <Graph
+              errorRate={errorRate}
+              accuracy={accuracy}
+              timespeed={timespeed}
+            />
           </div>
         </div>
       </div>
     </div>
   );
-
 }
 
 export default Dashboard;

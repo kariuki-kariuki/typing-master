@@ -1,6 +1,6 @@
 import "./graph.css"
 
-function Graph(){
+function Graph({errorRate, accuracy, timespeed}, ){
 
   return (
     <div className="graph">
@@ -16,24 +16,27 @@ function Graph(){
         <span>90 %</span>
       </span>
       <br />
+      <p>Time Speed</p>
       <span className="spantwo">
-        <span className="span2">Hello</span>
+        <span className="span2" style={{ width: `${timespeed}%` }}>
+        </span>
       </span>
       <br />
-
+      <p>ErrorRate</p>
       <span className="spanthree">
-        <span className="span3">Hello</span>
+        <span className="span3" style={{ width: `${errorRate}%` }}>
+        </span>
       </span>
       <br />
-
+      <p>Accuracy</p>
       <span className="spanfour">
-        <span className="span4">Hello</span>
+        <span className="span4" style={{ width: `${accuracy}%` }}>
+        </span>
       </span>
       <br />
-
-      <span className="spanfive">
+      {/* <span className="spanfive">
         <span className="span5">Hello</span>
-      </span>
+      </span> */}
       <br />
     </div>
   );
