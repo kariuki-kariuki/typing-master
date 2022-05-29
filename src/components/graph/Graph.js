@@ -37,7 +37,6 @@ function Graph({errorRate, accuracy, timespeed}, ){
       {/* <span className="spanfive">
         <span className="span5">Hello</span>
       </span> */}
-      <br />
     </div>
   );
 }
