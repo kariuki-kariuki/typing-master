@@ -3,6 +3,7 @@
   background-image: url("./wallpaperflare.com_wallpaper\ \(15\).jpg");
   background-position: center;
   background-size: cover;
+  padding: 10px;
 }
 
 .start{
@@ -27,4 +28,16 @@
   text-align: center;
   background-color: rgba(0, 0, 0, .4);
   color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .start, .stop{
+    float: unset;
+    width: 10vh;
+    margin-left: 20px;
+    margin-bottom: 5px;
+  }
+  .test{
+    padding-top: 40px;
+  }
 }

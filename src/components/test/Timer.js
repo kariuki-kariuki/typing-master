@@ -14,7 +14,7 @@ export default function Countdown({ setCount, handleFetch, handleInput, myLeng ,
 
       return () => clearInterval(intervalRef.current);
     }
-  }, []);
+  });
 
   
 

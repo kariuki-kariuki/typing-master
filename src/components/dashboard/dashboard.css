@@ -23,15 +23,12 @@
   animation-direction: reverse;
   animation-iteration-count: infinite;
 }
-.mycard p{
-  z-index: 200;
-  left: 0;
-}
+
 
 .tn{
   font-size: 32px;
 }
-.h-100{
+.height{
   height: 100vh;
   padding: 10px;
   background-image: url("./wallpaperflare.com_wallpaper\ \(16\).jpg");
@@ -91,16 +88,25 @@
 @media only screen and (max-width: 600px) {
 
   .mycard{
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin: 0 auto;
+    margin-top: 30px;
+    border-radius: 0px;
+    margin-bottom: 30px;
   }
   .tn{
-    font-size: 20px;
+    font-size: 30px;
   }
   .header{
     padding: 0px;
     padding-top: 30px;
   }
+  .h-100{
+    height: 100px;
+  }
 
+  .myGraph{
+    margin-left: 30px;
+  }
 }

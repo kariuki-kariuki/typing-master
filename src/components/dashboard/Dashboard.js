@@ -4,11 +4,11 @@ import Graph from "../graph/Graph";
 
 function Dashboard({wpm, errorRate, accuracy, timespeed}) {
   return (
-    <div className="container-main  h-100">
+    <div className="container-main height">
       <div className="header text-white text-center">
-        <h1>Statiscica</h1>
+        <h1>Statistica</h1>
       </div>
-      <div className="row ">
+      <div className="row">
         <div className="col-sm-4">
           <div className="mycard d-flex align-items-center flex-row justify-content-center">
             <div className="circle text-center d-flex align-items-center flex-row justify-content-center">

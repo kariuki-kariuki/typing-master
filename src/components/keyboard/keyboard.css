@@ -78,3 +78,27 @@
   background-size: cover;
   background-position: center;
 } */
+
+.sm-myInput{
+  display: none;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  background: rgba(0, 0, 0, .9);
+  color: wheat;
+  border: 2px solid white;
+  padding-left: 10px;
+  /* bottom: -100; */
+}
+
+
+@media only screen and (max-width: 600px) {
+    .sm-myInput{
+        display: block;
+        
+    }
+    .tests{
+        display: none;
+    }
+
+}

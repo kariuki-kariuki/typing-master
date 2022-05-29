@@ -153,7 +153,7 @@ function Test({ setErrRate, setAccuracy, setWpm, setTimespeed }) {
   }
 
   return (
-    <div className="container-main p-3 test">
+    <div className="container-main  test">
       <h1>{Math.floor(rates)} WPM</h1>
 
       <Countdown
