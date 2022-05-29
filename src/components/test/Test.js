@@ -4,6 +4,8 @@ import KeyBoard from "../keyboard/KeyBoard"
 import Countdown from "./Timer"
 
 
+// let wpm = 0 ; ratePercent = 0;
+
 function Test(){
   const [input, setInput] = useState('')
   const myLeng = input.length;
@@ -17,7 +19,8 @@ function Test(){
   let btn = document.getElementsByClassName("btn-key");
   let [right, setRight] = useState(0)
   let [wrong, setWrong] = useState(0)
-  console.log(rateP)
+  // console.log(rateP)
+
   
   // console.log(count)
   function handleFetch(){
@@ -49,13 +52,30 @@ function Test(){
   // handleFetch()
 
   function calculateTime(){
-    let charLenght = word.length
-    let time = charLenght / 3 * 60
-    let tt = count
-    let rateTime = time - tt / time * 100;
-    let rate = charLenght / 3 / (tt / 60);
-    setRate(rate)
-    setRatep(rateTime)
+    // word to type length from API
+    let charLenght = word.length;
+
+    // least time to complete the challenge
+    let time = (charLenght / 3) * 60;
+
+    // time taken in minutes
+    let tt = count / 60;
+
+    // speed in percentage of the time taken
+    let speed = (tt / time) * 100;
+
+    // rate typos
+    let wrongCount = (wrong / charLenght) * 100;
+
+    // rate of typing all correct answer wpm
+    let accurate = right / 3 / tt;
+
+    // rate of  time taken per char in minutes to complete the challenge
+    let rate =  right / charLenght * 100;
+
+    // set the accurate wrd per minute
+    setRate(accurate);
+    setRatep(speed);
   }
   
 
@@ -110,6 +130,7 @@ function Test(){
         setCount(0);
         setInput("");
         setwords("");
+        console.log(right)
     }
     
   }
