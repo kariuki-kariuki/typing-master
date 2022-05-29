@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/refactored-system/static/css/main.5ae3259a.css",
-    "main.js": "/refactored-system/static/js/main.198ace0f.js",
+    "main.js": "/refactored-system/static/js/main.0f6117a7.js",
     "static/media/wallpaperflare.com_wallpaper (15).jpg": "/refactored-system/static/media/wallpaperflare.com_wallpaper (15).9e3a8c39efe0628d4b37.jpg",
     "static/media/wallpaperflare.com_wallpaper (18).jpg": "/refactored-system/static/media/wallpaperflare.com_wallpaper (18).ab16cae5c7de62405ecc.jpg",
     "static/media/wallpaperflare.com_wallpaper (14).jpg": "/refactored-system/static/media/wallpaperflare.com_wallpaper (14).440039efca523205945e.jpg",
@@ -9,10 +9,10 @@
     "static/media/my.jpg": "/refactored-system/static/media/my.dc82b8e6f1a2e9e2e0a4.jpg",
     "index.html": "/refactored-system/index.html",
     "main.5ae3259a.css.map": "/refactored-system/static/css/main.5ae3259a.css.map",
-    "main.198ace0f.js.map": "/refactored-system/static/js/main.198ace0f.js.map"
+    "main.0f6117a7.js.map": "/refactored-system/static/js/main.0f6117a7.js.map"
   },
   "entrypoints": [
     "static/css/main.5ae3259a.css",
-    "static/js/main.198ace0f.js"
+    "static/js/main.0f6117a7.js"
   ]
 }
