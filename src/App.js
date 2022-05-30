@@ -2,17 +2,15 @@ import React from 'react';
 import SignUp from "./components/signup/SignUp";
 import './App.css';
 import {  Route, Routes} from "react-router-dom";
-
+import { useAuth } from './firebase';
 import Home from './components/home/Home';
 import Login from './components/login/Login';
 import Test from "./components/test/Test";
 import Nav from './components/navigation/Nav';
 import Dashboard from './components/dashboard/Dashboard';
 import { useState } from 'react';
-import useAuth from './firebase'
 
 function App() {
-  const currentUser = useAuth();
   const [login, setLogin] = useState(false)
   const [acc, setAcc] = useState({})
   const [wpm, setWpm] = useState(20)

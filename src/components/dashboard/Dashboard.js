@@ -1,12 +1,15 @@
 import "./dashboard.css"
 import Graph from "../graph/Graph";
+import { useAuth } from "../../firebase";
 
 
 function Dashboard({wpm, errorRate, accuracy, timespeed}) {
+  const currentUser = useAuth();
+
   return (
     <div className="height">
       <div className="header text-white text-center">
-        <h1>Statistica</h1>
+        <h1>Statistics {currentUser ? "for" : null} { currentUser?.email}</h1>
       </div>
       <div className="row">
         <div className="col-md-4">

@@ -2,30 +2,48 @@ import "./Login.css"
 import { NavLink } from "react-router-dom";
 // import axios from 'axios'
 import {  useState, useRef } from "react";
-import { login } from "../../firebase";
+import { login, useAuth, logout } from "../../firebase";
 
 function Login(){
+  const user = useAuth()
   const emailRef = useRef()
   const passwordRef = useRef() 
   const [load, setLoad] = useState(false)
  
 
   async function handleLogin(){
+    setLoad(true)
     try{
       await login(emailRef.current.value, passwordRef.current.value)
     } catch {
       alert("invalid password or email")
     }
+    setLoad(false)
+  }
+  async function handelLogout() {
+    setLoad(true);
+    try {
+      await logout();
+    } catch {
+      alert("Error");
+    }
+    setLoad(false);
   }
 
   function handleSubmit(e){
     e.preventDefault();
-      if(users.email !== '' && users.password !== ''){
+
+    if(user){
+      handelLogout()
+    } else {
+      if (emailRef.current.value !== "" && passwordRef.current.value !== "") {
         // setLogin(true)
-        handleLogin()
+        handleLogin();
       } else {
-        alert("user not found: signUp if you do not have an account")
+        alert("user not found: signUp if you do not have an account");
       }
+    }
+      
     
   }
   // function getUsers (){
@@ -68,7 +86,7 @@ function Login(){
         <span> Remember Me?</span>
         <br />
         <br />
-        <button type="submit" disabled = {cu} className="submit" >Login</button>
+        <button type="submit" disabled = {load || user}  className="submit" >{user ? "Logout" : "Login"}</button>
         <br />
         <div className="text-center">
           <p>

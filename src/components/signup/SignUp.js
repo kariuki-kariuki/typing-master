@@ -7,6 +7,7 @@ function SignUp({setAcc}) {
   // const [loading, setLoading] = useState()
 
   const currentUser = useAuth();
+  const [load, setLoad] = useState(false)
 
   const [userdata, setUserData] = useState({
     name : "",
@@ -15,20 +16,16 @@ function SignUp({setAcc}) {
     id : ''
   })
 
-  async function handelLogout(){
-    try{
-      await logout()
-    } catch {
-      alert("Error")
-    }
-  }
+  
 
   async function handleSignup() {
+    setLoad(true)
     try {
       await signup(userdata.email, userdata.password);
     } catch {
       alert("Email taken");
     }
+    setLoad(false)
   }
 
   // const [ emails, setEmails] = useState([])
@@ -121,7 +118,7 @@ function SignUp({setAcc}) {
         <span> Agree To Terms And Policies?</span>
         <br />
         <br />
-        <input type="submit" value="SignUp" className="submit" />
+        <input disabled = {load || currentUser} type="submit" value={currentUser ? 'Completed' : "SignUp" } className="submit" />
         <br />
         <div className="text-center">
           <p>
