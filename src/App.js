@@ -9,9 +9,10 @@ import Test from "./components/test/Test";
 import Nav from './components/navigation/Nav';
 import Dashboard from './components/dashboard/Dashboard';
 import { useState } from 'react';
+import useAuth from './firebase'
 
 function App() {
-
+  const currentUser = useAuth();
   const [login, setLogin] = useState(false)
   const [acc, setAcc] = useState({})
   const [wpm, setWpm] = useState(20)

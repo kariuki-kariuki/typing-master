@@ -1,19 +1,18 @@
 import "./Login.css"
 import { NavLink } from "react-router-dom";
 // import axios from 'axios'
-import {  useState } from "react";
+import {  useState, useRef } from "react";
 import { login } from "../../firebase";
 
-function Login({acc, setLogin}){
-  let [users, setUsers] = useState({
-    email : '',
-    password : ''
-
-  })
+function Login(){
+  const emailRef = useRef()
+  const passwordRef = useRef() 
+  const [load, setLoad] = useState(false)
+ 
 
   async function handleLogin(){
     try{
-      await login(users.email, users.password)
+      await login(emailRef.current.value, passwordRef.current.value)
     } catch {
       alert("invalid password or email")
     }
@@ -24,9 +23,8 @@ function Login({acc, setLogin}){
       if(users.email !== '' && users.password !== ''){
         // setLogin(true)
         handleLogin()
-        setUsers({...users, email : "", password : ''})
       } else {
-        alert("user not found: signUp if you do not have an acount")
+        alert("user not found: signUp if you do not have an account")
       }
     
   }
@@ -51,20 +49,18 @@ function Login({acc, setLogin}){
         <input
           name="email"
           type="email"
-          value={users.email}
           className="inputEmail"
+          ref={emailRef}
           placeholder=" &#x1F4E9;  example@gmail.com"
-          onChange={(e) => setUsers({ ...users, email: e.target.value })}
         />
         <br />
         <br />
         <input
           className="password"
           type="password"
-          value={users.password}
           name="password"
+          ref = { passwordRef }
           placeholder="&#128272;..........."
-          onChange={(e) => setUsers({ ...users, password: e.target.value })}
         />
         <br />
         <br />
@@ -72,12 +68,12 @@ function Login({acc, setLogin}){
         <span> Remember Me?</span>
         <br />
         <br />
-        <input type="submit" value="Login" className="submit" />
+        <button type="submit" disabled = {cu} className="submit" >Login</button>
         <br />
         <div className="text-center">
           <p>
             Don't have an account?
-            <NavLink to="/refactored-system/signup"> SignUp</NavLink>
+            <NavLink to="/signup"> SignUp</NavLink>
           </p>
           <p>Forget Password</p>
         </div>
