@@ -84,8 +84,8 @@ p{
 
 @media only screen and (max-width: 600px) {
   .graph{
-  width: 100%;
-  height: auto;
-  padding-left: 20px;
-}
+    width: 100%;
+    height: auto;
+    padding-left: 20px; 
+  }
 }

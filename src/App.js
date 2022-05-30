@@ -19,12 +19,12 @@ function App() {
   const [accuracy, setAccuracy] = useState(40)
   const [timespeed, setTimespeed] = useState(40)
   return (
-    <div className="container-main">
-      <div className="row">
-        <div className="col-sm-3">
+    <div className="container-main m-0">
+      <div className="row m-0">
+        <div className="col-sm-2 p-0">
           <Nav login={login} />
         </div>
-        <div className="col-sm-9">
+        <div className="col-sm-10 p-0">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route

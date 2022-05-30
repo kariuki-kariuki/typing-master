@@ -4,12 +4,12 @@ import Graph from "../graph/Graph";
 
 function Dashboard({wpm, errorRate, accuracy, timespeed}) {
   return (
-    <div className="container-main height">
+    <div className="height">
       <div className="header text-white text-center">
         <h1>Statistica</h1>
       </div>
       <div className="row">
-        <div className="col-sm-4">
+        <div className="col-md-4">
           <div className="mycard d-flex align-items-center flex-row justify-content-center">
             <div className="circle text-center d-flex align-items-center flex-row justify-content-center">
               <span className="tn">{Math.floor(wpm)}</span>
@@ -17,7 +17,7 @@ function Dashboard({wpm, errorRate, accuracy, timespeed}) {
             </div>
           </div>
         </div>
-        <div className="=col-sm-8">
+        <div className="col-md-8">
           <div className="myGraph">
             <Graph
               errorRate={errorRate}
