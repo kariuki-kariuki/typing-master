@@ -77,7 +77,7 @@ function Login(){
           className="password"
           type="password"
           name="password"
-          ref = { passwordRef }
+          ref={passwordRef}
           placeholder="&#128272;..........."
         />
         <br />
@@ -86,7 +86,11 @@ function Login(){
         <span> Remember Me?</span>
         <br />
         <br />
-        <button type="submit" disabled = {load || user}  className="submit" >{user ? "Logout" : "Login"}</button>
+        <div className="container-main d-flex justify-content-center">
+          <button type="submit" disabled={load || user} className="submit">
+            {user ? "Logout" : "Login"}
+          </button>
+        </div>
         <br />
         <div className="text-center">
           <p>

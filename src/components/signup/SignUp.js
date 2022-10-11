@@ -79,7 +79,7 @@ function SignUp({setAcc}) {
           type="email"
           value={userdata.email}
           className="inputEmail"
-          onChange={(e) => setUserData({...userdata, email : e.target.value})}
+          onChange={(e) => setUserData({ ...userdata, email: e.target.value })}
           placeholder=" &#x1F4E9;  example@gmail.com"
         />
         <br />
@@ -92,12 +92,12 @@ function SignUp({setAcc}) {
           required
           className="inputEmail"
           placeholder="    Sammy Doe"
-          onChange={ (e) =>  setUserData(
-            {
+          onChange={(e) =>
+            setUserData({
               ...userdata,
-              name : e.target.value
-            }
-          )}
+              name: e.target.value,
+            })
+          }
         />
         <br />
         <br />
@@ -106,10 +106,12 @@ function SignUp({setAcc}) {
           type="password"
           name="password"
           value={userdata.password}
-          onChange = {(e) => setUserData({
-            ...userdata,
-            password : e.target.value
-          })}
+          onChange={(e) =>
+            setUserData({
+              ...userdata,
+              password: e.target.value,
+            })
+          }
           placeholder="&#128272;..........."
         />
         <br />
@@ -118,12 +120,17 @@ function SignUp({setAcc}) {
         <span> Agree To Terms And Policies?</span>
         <br />
         <br />
-        <input disabled = {load || currentUser} type="submit" value={currentUser ? 'Completed' : "SignUp" } className="submit" />
+        <div className="container-main d-flex justify-content-center">
+          <input
+            disabled={load || currentUser}
+            type="submit"
+            value={currentUser ? "Completed" : "Signup"}
+            className="submit"
+          />
+        </div>
         <br />
         <div className="text-center">
-          <p>
-            {/* Already have an account? <a>Login.</a> */}
-          </p>
+          <p>{/* Already have an account? <a>Login.</a> */}</p>
         </div>
       </form>
     </div>

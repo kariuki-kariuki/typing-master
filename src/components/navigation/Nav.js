@@ -3,9 +3,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Nav.css"
-// import { useState } from "react";
-
-// import Login from "../login/Login";
 
 function Nav({login}){
 
@@ -23,43 +20,28 @@ function Nav({login}){
     <>
       <nav className="container-main p-5 .d-none .d-lg-block .d-xl-none">
         <br />
-        <NavLink
-          style={{ color: "white", fontSize: "32px" }}
-          to="/"
-        >
+        <NavLink style={{ color: "white", fontSize: "1.5rem" }} to="/">
           #Home
         </NavLink>
         <br />
         <br />
-        <NavLink
-          style={{ color: "white", fontSize: "32px" }}
-          to="/test"
-        >
+        <NavLink style={{ color: "white", fontSize: "1.5rem" }} to="/test">
           #Test
         </NavLink>
         <br />
         <br />
-        <NavLink
-          style={{ color: "white", fontSize: "32px" }}
-          to="/login"
-        >
+        <NavLink style={{ color: "white", fontSize: "1.5rem" }} to="/login">
           #Login
         </NavLink>
         <br />
         <br />
 
-        <NavLink
-          style={{ color: "white", fontSize: "32px" }}
-          to="/dashboard"
-        >
+        <NavLink style={{ color: "white", fontSize: "1.5rem" }} to="/dashboard">
           #Dashboard
         </NavLink>
         <br />
         <br />
-        <NavLink
-          style={{ color: "white", fontSize: "32px" }}
-          to="/signup"
-        >
+        <NavLink style={{ color: "white", fontSize: "1.5rem" }} to="/signup">
           #SignUp
         </NavLink>
 
@@ -76,36 +58,21 @@ function Nav({login}){
         ></i>
       </button>
       <header className={display ? "block" : "none"}>
-        <NavLink
-          style={{ color: "white", fontSize: "15px" }}
-          to="/"
-        >
+        <NavLink style={{ color: "white", fontSize: "15px" }} to="/">
           <i className="fa fa-house-damage fa-fw"></i> Home
         </NavLink>
-        <NavLink
-          style={{ color: "white", fontSize: "15px" }}
-          to="/test"
-        >
+        <NavLink style={{ color: "white", fontSize: "15px" }} to="/test">
           <i className="fa fa-hourglass-half fa-fw"></i> Test
         </NavLink>
-        <NavLink
-          style={{ color: "white", fontSize: "15px" }}
-          to="/dashboard"
-        >
-          <i className="fa fa-th fa-fw"></i>  Dashboard
+        <NavLink style={{ color: "white", fontSize: "15px" }} to="/dashboard">
+          <i className="fa fa-th fa-fw"></i> Dashboard
         </NavLink>
-        <NavLink
-          style={{ color: "white", fontSize: "15px" }}
-          to="/login"
-        >
-          <i className="fa fa-unlock-alt"></i>  Login
+        <NavLink style={{ color: "white", fontSize: "15px" }} to="/login">
+          <i className="fa fa-unlock-alt"></i> Login
         </NavLink>
 
-        <NavLink
-          style={{ color: "white", fontSize: "15px" }}
-          to="/signup"
-        >
-          <i className="fa fa-user-plus fa-fw"></i>  SignUp
+        <NavLink style={{ color: "white", fontSize: "15px" }} to="/signup">
+          <i className="fa fa-user-plus fa-fw"></i> SignUp
         </NavLink>
       </header>
     </>

@@ -1,5 +1,5 @@
 .login{
-  background-image: url("./my.jpg");
+  background-image: url("./bg.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -7,7 +7,7 @@
 }
 
 .login-card{
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(185, 174, 174, 0.4);
   width: 40%;
   padding: 5%;
   margin-top: 20%;
@@ -21,28 +21,34 @@ h4{
 }
 
 .span1{
-  font-size: .5rem;
+  font-size: .7rem;
   margin: 0;
 }
 
 .inputEmail{
   background-color: rgba(0, 0, 0, .4);
-  border: 1px solid white;
+  /* border: 1px solid white; */
+  border: none;
+
   color: white;
   border-radius: 6px;
   width: 100%;
   height: 30px;
+  padding: 20px;
 }
 
 .password{
   background-color: rgba(0, 0, 0, .4);
-  border: 1px solid white;
+  /* border: 1px solid white; */
+  border: none;
   color: white;
   border-radius: 6px;
   /* font-size: 20px; */
   letter-spacing: 5px;
   width: 100%;
   height: 30px;
+  padding: 20px;
+
 }
 
 .check{
@@ -51,11 +57,12 @@ h4{
 
 .submit{
   background-color: rgb(26, 26, 151);
-  width: 100%;
-  padding: 6px;
+  width: 50%;
+  padding: 30px;
   color: white;
   border: none;
   border-radius: 6px;
+  align-self: center;
 }
 
 @media only screen  and (max-width : 600px){

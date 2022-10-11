@@ -1,5 +1,5 @@
 .signup{
-  background-image: url("./my.jpg");
+  background-image: url("./bg.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -7,7 +7,7 @@
 }
 
 .signup-card{
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(202, 192, 192, 0.4);
   width: 40%;
   padding: 5%;
   margin-top: 20%;
@@ -51,7 +51,6 @@ h4{
 
 .submit{
   background-color: rgb(26, 26, 151);
-  width: 100%;
   padding: 6px;
   color: white;
   border: none;
