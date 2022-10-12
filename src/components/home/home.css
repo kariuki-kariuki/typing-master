@@ -4,11 +4,12 @@
 h1 {
   text-shadow: 1px 1px 1px red,
                2px 2px 2px red;
+  color: black;
 }
 .card-custom{
-  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+  /* box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2); */
   transition: 0.3s;
-  background: rgba(0, 0, 0, .6);
+  /* background: rgba(31, 29, 29, 0.767); */
   border-radius: 5px;
   padding: 10px;
   width: 50%;
@@ -20,7 +21,7 @@ h1 {
 }
 
 .home{
-  background-image: url('./wallpaperflare.com_wallpaper\ \(14\).jpg');
+  background-image: url('./lol.jpg');
   background-position: center;
   background-size: cover;
   height: 100vh;

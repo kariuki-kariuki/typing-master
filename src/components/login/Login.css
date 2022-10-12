@@ -1,5 +1,6 @@
 .login{
-  background-image: url("./bg.jpg");
+  /* background-image: url("./bg.jpg"); */
+  background-image: linear-gradient(45deg, rgb(26, 23, 25), rgb(24, 24, 197));
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -58,7 +59,7 @@ h4{
 .submit{
   background-color: rgb(26, 26, 151);
   width: 50%;
-  padding: 30px;
+  padding: 5px 0px;
   color: white;
   border: none;
   border-radius: 6px;
